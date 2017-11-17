@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:id="@+id/load"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorGray"
+
+                android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:id="@+id/base"
+            android:layout_height="match_parent">
+
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_horizontal">
+                </LinearLayout>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:onClick="onClick"
+                        android:text="ОЧИСТИТЬ\nКОНФИГУРАЦИЮ"
+                        android:width="@dimen/btn_width"
+                        android:id="@+id/btnClr"/>
+
+                <View
+                        android:layout_width="324dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/colorGray"/>
+                <?Строка вход1 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                                android:id="@+id/cbIn1"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onClick"
+                                android:button="@null"
+                                android:text="Вход 1"
+                                android:textSize="@dimen/size32"
+                                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="256dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+                <?Строка расшифровка вход1 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutIn1"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgIn1Type"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn1Roll"
+                                    android:text="Роллета"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn1Stair"
+                                    android:text="Ступень"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Открытое состояние"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginLeft="12dp"
+                                android:textSize="@dimen/size24"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgIn1Signal"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn1On"
+                                    android:text="Активный сигнал"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn1Off"
+                                    android:text="Неактивный сигнал"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="324dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <?Строка вход2 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                                android:id="@+id/cbIn2"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onClick"
+                                android:button="@null"
+                                android:text="Вход 2"
+                                android:textSize="@dimen/size32"
+                                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="256dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+                <?Строка расшифровка вход2 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutIn2"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgIn2Type"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn2Roll"
+                                    android:text="Роллета"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn2Stair"
+                                    android:text="Ступень"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Открытое состояние"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginLeft="12dp"
+                                android:textSize="@dimen/size24"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgIn2Signal"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn2On"
+                                    android:text="Активный сигнал"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbIn2Off"
+                                    android:text="Неактивный сигнал"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="324dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <?Строка выход1 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                                android:id="@+id/cbOut1"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onClick"
+                                android:button="@null"
+                                android:text="Выход 1"
+                                android:textSize="@dimen/size32"
+                                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="256dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+                <?Строка расшифровка выход1 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutOut1"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgOut1Type"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut1Beacon"
+                                    android:text="Маяк"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut1Rear"
+                                    android:text="Задний прожектор"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut1Into"
+                                    android:text="Освещение отсека"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="324dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <?Строка выход2 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                                android:id="@+id/cbOut2"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onClick"
+                                android:button="@null"
+                                android:text="Выход 2"
+                                android:textSize="@dimen/size32"
+                                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="256dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+                <?Строка расшифровка выход2 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutOut2"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgOut2Type"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut2Beacon"
+                                    android:text="Маяк"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut2Rear"
+                                    android:text="Задний прожектор"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut2Into"
+                                    android:text="Освещение отсека"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="324dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <?Строка выход3 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                                android:id="@+id/cbOut3"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onClick"
+                                android:button="@null"
+                                android:text="Выход 3"
+                                android:textSize="@dimen/size32"
+                                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="256dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+                <?Строка расшифровка выход3 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutOut3"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgOut3Type"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut3Beacon"
+                                    android:text="Маяк"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut3Rear"
+                                    android:text="Задний прожектор"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut3Into"
+                                    android:text="Освещение отсека"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut3Tail"
+                                    android:text="Габариты"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="324dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_marginTop="24dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:onClick="onClick"
+                        android:text="СОХРАНИТЬ"
+                        android:width="@dimen/btn_width"
+                        android:id="@+id/btnSave"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</FrameLayout>

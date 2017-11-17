@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="power_module">
+        <item>Роллета</item>
+        <item>Ступень</item>
+    </string-array>
+</resources>

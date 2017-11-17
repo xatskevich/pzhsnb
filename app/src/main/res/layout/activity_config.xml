@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:id="@+id/load"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/colorGray"
+
+                android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:id="@+id/base"
+            android:layout_height="match_parent">
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="32dp">
+                        </LinearLayout>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:textAllCaps="false"
+                                android:layout_gravity="center"
+                                android:onClick="onClick"
+                                android:text="КОНФИГУРАЦИЯ\nСИСТЕМЫ"
+                                android:width="@dimen/btn_width"
+                                android:id="@+id/btnSys"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cabin"
+                        android:id="@+id/cabinText"
+                        android:layout_marginTop="@dimen/marg_top"
+                        android:textSize="24sp"
+                        android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:textAllCaps="false"
+
+                                android:layout_gravity="center"
+                                android:onClick="onClick"
+                                android:text="СИЛОВОЙ МОДУЛЬ"
+                                android:width="@dimen/btn_width"
+                                android:id="@+id/btnCab"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/body"
+                        android:textSize="24sp"
+                        android:id="@+id/bodyText"
+                        android:layout_marginTop="@dimen/marg_top"
+                        android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="@dimen/btn_left_margin"
+                                android:layout_marginTop="2dp"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СЛЕВА 1"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody1"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="@dimen/btn_left_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СЛЕВА 2"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody2"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="@dimen/btn_left_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СЛЕВА 3"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody3"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="@dimen/btn_left_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СЛЕВА 4"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody4"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/btn_right_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СПРАВА 5"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody5"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/btn_right_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СПРАВА 6"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody6"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/btn_right_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СПРАВА 7"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody7"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/btn_right_margin"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ СПРАВА 8"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody8"/>
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/marg_top"
+                                android:textAllCaps="false"
+                                android:text="СИЛОВОЙ МОДУЛЬ ЗАДНИЙ"
+                                android:width="@dimen/btn_width"
+                                android:onClick="onClick"
+                                android:id="@+id/btnBody9"/>
+
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="32dp">
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</FrameLayout>

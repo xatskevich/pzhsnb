@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Pozhsnab</string>
+    <string name="large">48sp</string>
+    <string name="medium">32sp</string>
+    <string name="small">24sp</string>
+    <string name="tiny">16sp</string>
+    <string name="connect_label">Подключение</string>
+    <string name="config_label">Конфигурация</string>
+    <string name="diag_label">Диагностика</string>
+    <string name="button_width">112dp</string>
+    <string name="cabin">
+        <u>Кабина</u>
+    </string>
+    <string name="doors">Количество дверей</string>
+    <string name="body">
+        <u>Надстройка</u>
+    </string>
+    <string name="body_left">Левый борт</string>
+    <string name="body_right">Правый борт</string>
+    <string name="rear">Задний отсек</string>
+    <string name="options">Силовой модуль</string>
+    <string name="unadressed">Количество неадресованных модулей:</string>
+    <string name="title_activity_config_kbr">Конфигурация модуля КБР</string>
+    <string name="title_activity_config_power">Конфигурация модуля надстройки</string>
+</resources>
