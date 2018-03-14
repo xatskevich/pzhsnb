@@ -20,7 +20,7 @@ import java.util.UUID;
 public class Connect {
     public static Handler mHandler = new Handler();
     public static final int REQUEST_ENABLE_BT = 1;
-    public static final int RECIEVE_MESSAGE = 1;        // Статус для Handler
+    public static final int RECEIVE_MESSAGE = 1;        // Статус для Handler
     public static BluetoothAdapter btAdapter = null;
     public static BluetoothSocket btSocket = null;
     public static StringBuilder sb = new StringBuilder();
@@ -91,7 +91,7 @@ public class Connect {
                     //txtArduino.setText(str);
 
 
-                    mHandler.obtainMessage(RECIEVE_MESSAGE, bytes, -1, buffer).sendToTarget();     // Отправляем в очередь сообщений Handler
+                    mHandler.obtainMessage(RECEIVE_MESSAGE, bytes, -1, buffer).sendToTarget();     // Отправляем в очередь сообщений Handler
                 } catch (IOException e) {
                     break;
                 }

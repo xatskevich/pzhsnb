@@ -27,7 +27,7 @@
     <FrameLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/base"
             android:layout_height="match_parent">
 
@@ -55,7 +55,7 @@
                         android:textAllCaps="false"
                         android:layout_gravity="center"
                         android:onClick="onClick"
-                        android:text="ОЧИСТИТЬ\nКОНФИГУРАЦИЮ"
+                        android:text="@string/clear_config"
                         android:width="@dimen/btn_width"
                         android:id="@+id/btnClr"/>
 
@@ -85,7 +85,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:onClick="onClick"
                                 android:button="@null"
-                                android:text="Вход 1"
+                                android:text="@string/in1"
                                 android:textSize="@dimen/size32"
                                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                                 android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn1Roll"
-                                    android:text="Роллета"
+                                    android:text="@string/roll"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -140,7 +140,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn1Stair"
-                                    android:text="Ступень"
+                                    android:text="@string/stair"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -156,7 +156,7 @@
                         <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Открытое состояние"
+                                android:text="@string/open_state"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginLeft="12dp"
                                 android:textSize="@dimen/size24"/>
@@ -184,7 +184,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn1On"
-                                    android:text="Активный сигнал"
+                                    android:text="@string/active"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -193,7 +193,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn1Off"
-                                    android:text="Неактивный сигнал"
+                                    android:text="@string/inactive"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -229,7 +229,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:onClick="onClick"
                                 android:button="@null"
-                                android:text="Вход 2"
+                                android:text="@string/in2"
                                 android:textSize="@dimen/size32"
                                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                                 android:layout_width="match_parent"
@@ -275,7 +275,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn2Roll"
-                                    android:text="Роллета"
+                                    android:text="@string/roll"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -284,7 +284,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn2Stair"
-                                    android:text="Ступень"
+                                    android:text="@string/stair"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -300,7 +300,7 @@
                         <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Открытое состояние"
+                                android:text="@string/open_state"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginLeft="12dp"
                                 android:textSize="@dimen/size24"/>
@@ -328,7 +328,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn2On"
-                                    android:text="Активный сигнал"
+                                    android:text="@string/active"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -337,7 +337,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbIn2Off"
-                                    android:text="Неактивный сигнал"
+                                    android:text="@string/inactive"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -373,7 +373,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:onClick="onClick"
                                 android:button="@null"
-                                android:text="Выход 1"
+                                android:text="@string/out1"
                                 android:textSize="@dimen/size32"
                                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                                 android:layout_width="match_parent"
@@ -417,8 +417,17 @@
                                     android:layout_height="wrap_content"
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut1Light"
+                                    android:text="@string/ext_light"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbOut1Beacon"
-                                    android:text="Маяк"
+                                    android:text="@string/beacon"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -427,7 +436,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbOut1Rear"
-                                    android:text="Задний прожектор"
+                                    android:text="@string/rear_light"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -436,7 +445,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbOut1Into"
-                                    android:text="Освещение отсека"
+                                    android:text="@string/inside_light"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -472,7 +481,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:onClick="onClick"
                                 android:button="@null"
-                                android:text="Выход 2"
+                                android:text="@string/out2"
                                 android:textSize="@dimen/size32"
                                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                                 android:layout_width="match_parent"
@@ -516,8 +525,17 @@
                                     android:layout_height="wrap_content"
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut2Into"
+                                    android:text="@string/inside_light"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbOut2Beacon"
-                                    android:text="Маяк"
+                                    android:text="@string/beacon"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -526,7 +544,7 @@
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
                                     android:id="@+id/rbOut2Rear"
-                                    android:text="Задний прожектор"
+                                    android:text="@string/rear_light"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -535,8 +553,8 @@
                                     android:checked="true"
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
-                                    android:id="@+id/rbOut2Into"
-                                    android:text="Освещение отсека"
+                                    android:id="@+id/rbOut2Tail"
+                                    android:text="@string/tail_light"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -572,7 +590,7 @@
                                 android:layout_marginLeft="8dp"
                                 android:onClick="onClick"
                                 android:button="@null"
-                                android:text="Выход 3"
+                                android:text="@string/out3"
                                 android:textSize="@dimen/size32"
                                 android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                                 android:layout_width="match_parent"
@@ -617,26 +635,8 @@
                                     android:checked="true"
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
-                                    android:id="@+id/rbOut3Beacon"
-                                    android:text="Маяк"
-                                    android:textSize="@dimen/size24"/>
-
-                            <RadioButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:button="@null"
-                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
-                                    android:id="@+id/rbOut3Rear"
-                                    android:text="Задний прожектор"
-                                    android:textSize="@dimen/size24"/>
-
-                            <RadioButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:button="@null"
-                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
-                                    android:id="@+id/rbOut3Into"
-                                    android:text="Освещение отсека"
+                                    android:id="@+id/rbOut3Tail"
+                                    android:text="@string/tail_light"
                                     android:textSize="@dimen/size24"/>
 
                             <RadioButton
@@ -645,8 +645,136 @@
                                     android:checked="true"
                                     android:button="@null"
                                     android:drawableRight="?android:attr/listChoiceIndicatorSingle"
-                                    android:id="@+id/rbOut3Tail"
-                                    android:text="Габариты"
+                                    android:id="@+id/rbOut3Beacon"
+                                    android:text="@string/beacon"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut3Rear"
+                                    android:text="@string/rear_light"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut3Into"
+                                    android:text="@string/inside_light"
+                                    android:textSize="@dimen/size24"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="324dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+
+                <?Строка выход4 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                                android:id="@+id/cbOut4"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onClick"
+                                android:button="@null"
+                                android:text="@string/out4"
+                                android:textSize="@dimen/size32"
+                                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="256dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorGray"/>
+
+                </LinearLayout>
+                <?Строка расшифровка выход4 ?>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutOut4"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal">
+
+                        <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rgOut4Type"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:orientation="vertical">
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut4Strobe"
+                                    android:text="@string/strobe"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut4Beacon"
+                                    android:text="@string/beacon"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut4Rear"
+                                    android:text="@string/rear_light"
+                                    android:textSize="@dimen/size24"/>
+
+                            <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                                    android:id="@+id/rbOut4Into"
+                                    android:text="@string/inside_light"
                                     android:textSize="@dimen/size24"/>
 
                         </RadioGroup>
@@ -669,7 +797,7 @@
                         android:textAllCaps="false"
                         android:layout_gravity="center"
                         android:onClick="onClick"
-                        android:text="СОХРАНИТЬ"
+                        android:text="@string/save"
                         android:width="@dimen/btn_width"
                         android:id="@+id/btnSave"/>
 

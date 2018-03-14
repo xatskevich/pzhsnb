@@ -57,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
         Connect.mHandler = new Handler() {
             public void handleMessage(android.os.Message msg) {
                 //mText.setText(Connect.message);
-                if(Connect.buffer[0] == -18){
+                //Toast.makeText(getBaseContext(), String.valueOf(Connect.buffer[0]), Toast.LENGTH_LONG).show();
+                if(Connect.buffer[0] == 0xEE){
                     button_connect.setText("Отключить");
                     devText.setText(devName);
-                }
+            }
 
             }
         };//*/
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Connect.mHandler = new Handler() {
             public void handleMessage(android.os.Message msg) {
-                // mText.setText(Connect.message);
+                mText.setText(Connect.message);
                 if(Connect.buffer[0] == -18){
                     button_connect.setText("Отключить");
                     devText.setText(devName);
